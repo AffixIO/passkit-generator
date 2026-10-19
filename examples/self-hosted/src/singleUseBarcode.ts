@@ -186,6 +186,13 @@ app.route("/singleUse/scan").post(async (request, response) => {
 	try {
 		const presented = await affixio("/v1/link/verify", { token: message });
 
+		if (presented.status === 409) {
+			response
+				.status(409)
+				.json({ admitted: false, reason: "already_used" });
+			return;
+		}
+
 		if (!presented.ok || presented.data.allow !== true) {
 			response.status(403).json({
 				admitted: false,
