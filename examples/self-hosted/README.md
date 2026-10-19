@@ -37,6 +37,7 @@ Please note that `field.js` example is hardcoded to download `exampleBooking.pas
 | PKPass.from    | `/pkpassfrom`     | -                                                                                                                           |
 | barcodes       | `/barcodes`       | Using `?alt=true` query parameter, will lead to barcode string message usage instead of selected ones                       |
 | pkpasses       | `/pkpasses`       | -                                                                                                                           |
+| singleUse      | `/singleUse`      | Puts a single-use token in the QR. Needs `AFFIXIO_API_KEY`. Door check: `POST /singleUse/scan` (see the file header).       |
 
 ---
 

@@ -5,3 +5,4 @@ import "./PKPasses.js";
 import "./scratch.js";
 import "./setBarcodes.js";
 import "./setExpirationDate.js";
+import "./singleUseBarcode.js";
